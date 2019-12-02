@@ -1,0 +1,26 @@
+<div class="lm__chart-container" fxLayout="column" fxLAyoutAlign="center center">
+
+    <h1 class="lm__text-title-primary">{{ title }}</h1>
+    <h2 class="lm__text-subtitle">{{ subtitle }}</h2>
+
+    <app-mind-map></app-mind-map>
+
+</div>
+
+<div class="lm__chart-navigator" fxLayout="row" fxLayoutAlign="space-around center">
+
+    <mat-card>
+
+        <mat-card-content>
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+                <img mat-card-avatar src="assets/images/azrin.jpg" alt="">
+                <p>{{ content }}</p>
+                <button mat-mini-fab color="primary" routerLink="/class">
+                  <mat-icon>keyboard_arrow_right</mat-icon>
+               </button>
+
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+</div>

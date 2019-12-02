@@ -1,0 +1,25 @@
+<div class="lm__chart-container" fxLayout="column" fxLayoutAlign="center center">
+
+    <h2>{{ title }}</h2>
+
+    <ngx-charts-bar-horizontal [view]="view" [scheme]="colorScheme" [results]="single" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [legendTitle]="legendTitle" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+        [yAxisLabel]="yAxisLabel" [showDataLabel]="showDataLabel">
+    </ngx-charts-bar-horizontal>
+
+</div>
+
+<div class="lm__chart-control" fxLayout="column" fxLayoutAlign="center center">
+    <mat-slide-toggle color="primary" [checked]="showDataLabel" (change)="toggle()">Show Data Label</mat-slide-toggle>
+</div>
+
+<div class="lm__chart-navigator" fxLayout="row" fxLayoutAlign="space-around center">
+
+    <button mat-mini-fab color="primary" routerLink="/sectors">
+               <mat-icon>keyboard_arrow_left</mat-icon>
+            </button>
+
+    <button mat-mini-fab color="primary" routerLink="/sectors">
+               <mat-icon>keyboard_arrow_right</mat-icon>
+            </button>
+
+</div>

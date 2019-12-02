@@ -1,0 +1,55 @@
+@import 'src/app/configurations/scss/color-config';
+@mixin layout-child($name) {
+    .#{$name} {
+        &__dash {
+            &-menu-item {
+                border: 0.5px solid rgba(254, 67, 101, 0.6);
+                padding: 20px;
+                border-radius: 5px;
+            }
+            &-menu-item-title {
+                color: rgba(254, 67, 101, 0.8);
+            }
+            &-menu-icon {
+                padding: 20px;
+                border: 0.1px solid $primary;
+                margin: 10px;
+                color: $dark-bg;
+                border-radius: 5px;
+                background-image: linear-gradient(to right top, #fe4364, #ff4a71, #ff527d, #ff5a89, #ff6295, #ff69a0, #ff71aa, #ff78b4, #ff80c0, #ff88cb, #ff91d6, #ff99e0);
+            }
+            &-menu-item-title:hover {
+                color: #980000;
+            }
+            &-menu-item:hover {
+                border: 0.5px solid #980000;
+                padding: 20px;
+                border-radius: 5px;
+            }
+            &-menu-icon:hover {
+                border: 0.1px solid $primary;
+                color: $dark-bg;
+                padding: 20px;
+                border-radius: 5px;
+                background-image: linear-gradient(to right top, #fe4364, #fa586e, #f66978, #f17882, #eb868c, #eb9490, #eba296, #eaaf9f, #edc1a8, #f0d3b6, #f2e5c8, #f7f5dd);
+            }
+        }
+        &__select {
+            &-panel-actions {
+                position: -webkit-sticky;
+                position: sticky;
+                bottom: 0;
+            }
+            &-box {
+                margin-top: 5vh;
+                margin-bottom: 15vh;
+                padding: 10px;
+                border-radius: 10px;
+            }
+            &-list {
+                text-align: left;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}

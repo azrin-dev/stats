@@ -1,0 +1,21 @@
+<div class="lm__chart-container" fxLayout="column" fxLAyoutAlign="center center">
+    <h2>Establishment by Sectors</h2>
+
+    <ngx-charts-pie-chart [view]="view" [results]="results" [scheme]="colorScheme" [animations]="animations" [labels]="labels" [trimLabels]="trimLabels" [maxLabelLength]="maxLabelLength" [legend]="showLegend" [legendTitle]="legendTitle" [legendPosition]="legendPosition"
+        [gradient]="gradient" [tooltipDisabled]="tooltipDisabled" [arcWidth]="arcWidth" [explodeSlices]="explodeSlices" (select)="sectorSelected($event)"></ngx-charts-pie-chart>
+
+</div>
+
+<app-clickable></app-clickable>
+
+<div class="lm__chart-navigator" fxLayout="row" fxLayoutAlign="space-around center">
+
+    <button mat-mini-fab color="primary" routerLink="/class">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+       </button>
+
+    <button mat-mini-fab color="primary" routerLink="/forecast/selangor/services">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+       </button>
+
+</div>

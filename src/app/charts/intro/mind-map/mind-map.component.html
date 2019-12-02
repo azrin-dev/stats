@@ -1,0 +1,49 @@
+<ngx-graph [view]="[600, 300]" layout="dagre" [links]="[
+      {
+         id: 'a',
+         source: '1',
+         target: '2'
+      }, {
+         id: 'b',
+         source: '1',
+         target: '3'
+      }, {
+         id: 'c',
+         source: '3',
+         target: '4'
+      }, {
+         id: 'd',
+         source: '3',
+         target: '5'
+      }, {
+         id: 'e',
+         source: '4',
+         target: '5'
+      }, {
+         id: 'f',
+         source: '2',
+         target: '6'
+      }
+   ]" [nodes]="[     { id: '1', label: 'Node A' }, 
+                     { id: '2', label: 'Node B' },   
+                     { id: '3', label: 'Node C' }, 
+                     { id: '4', label: 'Node D' }, 
+                     { id: '5', label: 'Node E' }, 
+                     { id: '6', label: 'Node F' }
+   ]">
+
+    <ng-template #nodeTemplate let-node>
+        <svg:g class="node" ngx-tooltip [tooltipPlacement]="'top'" [tooltipType]="'tooltip'" [tooltipTitle]="node.label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" [attr.width]="node.dimension.width"
+                  [attr.height]="node.dimension.height" [attr.fill]="node.data.color"/>
+            </svg>
+            <!-- <svg:text alignment-baseline="central" [attr.x]="6" [attr.y]="node.dimension.height / 2">
+                  {{ node.label }}
+               </svg:text> -->
+        </svg:g>
+    </ng-template>
+
+
+</ngx-graph>

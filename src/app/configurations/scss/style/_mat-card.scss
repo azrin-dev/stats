@@ -1,0 +1,33 @@
+@import '../color-config.scss';
+@mixin mat-card-settings($name) {
+    #{$name} {
+        box-sizing: border-box !important;
+        background-color: transparent;
+        text-align: center;
+        margin: 10px 0 10px 0;
+        &-title {
+            font-size: 1.5rem !important;
+            color: $font;
+            padding: 10px 10px 10px 10px;
+        }
+        &-subtitle {
+            text-align: center;
+            font-size: 1.2rem !important;
+            color: $accent !important;
+            font-weight: bold;
+        }
+        &-sm-image {
+            margin-bottom: 20px;
+        }
+        &-content {
+            width: 100% !important;
+            height: 100% !important;
+            box-sizing: border-box !important;
+            padding: 20px 10px 20px 10px;
+            text-align: left;
+        }
+    }
+    #{$name}:hover {
+        transform: scaleY(104%);
+    }
+}

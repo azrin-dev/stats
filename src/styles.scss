@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$stats-primary: mat-palette($mat-indigo);
+$stats-accent: mat-palette($mat-pink, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$stats-warn: mat-palette($mat-red);
+// Create the theme object (a Sass map containing all of the palettes).
+$stats-theme: mat-light-theme($stats-primary, $stats-accent, $stats-warn);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($stats-theme);
+@import './app/configurations/scss/index.scss';
+@import 'src/app/user/user.component';
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Lato, Oswald, Roboto, "Helvetica Neue", sans-serif;
+    color: #ffffff;
+}
+
+.ngx-charts text {
+    fill: #A0AABE;
+}
+
+.chart-legend .legend-label .active .legend-label-text {
+    color: #fe4364 !important;
+}
+
+.tick {
+    color: #ffffff !important;
+}
+
+.mat-list-item-content {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.mat-form-field-wrapper {
+    width: 100% !important;
+}
+
+.mat-form-field-infix {
+    width: 100% !important;
+}
+
+.ck-editor__editable_inline {
+    min-height: 500px;
+    color: #303030;
+}
+
+.angular-editor-toolbar {
+    background-color: transparent !important;
+}
+
+.angular-editor-button {
+    color: #303030;
+}
+
+mat-sidenav {
+    width: 300px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

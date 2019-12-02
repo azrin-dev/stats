@@ -1,0 +1,52 @@
+<div class="lm__chart-container" fxLayout="column" fxLayoutAlign="center center">
+
+    <h2>{{ title | titlecase }}</h2>
+
+    <ngx-charts-line-chart style="position: static; display: inline-block; transform: none;" [scheme]="chartSettings.colorScheme" [view]="chartSettings.view" class="chart-container" [results]="results" [animations]="chartSettings.animations" [legend]="chartSettings.showLegend"
+        [legendTitle]="chartSettings.legendTitle | titlecase" [legendPosition]="chartSettings.legendPosition" [gradient]="chartSettings.gradient" [xAxis]="chartSettings.showXAxis" [yAxis]="chartSettings.showYAxis" [showXAxisLabel]="false" [showYAxisLabel]="false"
+        [xAxisLabel]="'chartSettings.xAxisLabel'" [yAxisLabel]="'chartSettings.yAxisLabel'" [autoScale]="chartSettings.autoScale" [timeline]="chartSettings.timeline" [showGridLines]="chartSettings.showGridLines" [roundDomains]="chartSettings.roundDomains"
+        [tooltipDisabled]="chartSettings.tooltipDisabled" [trimXAxisTicks]="chartSettings.trimXAxisTicks" [trimYAxisTicks]="chartSettings.trimYAxisTicks" [maxXAxisTickLength]="chartSettings.maxXAxisTickLength" [maxYAxisTickLength]="chartSettings.maxYAxisTickLength">
+    </ngx-charts-line-chart>
+
+</div>
+
+<div>
+    <form [formGroup]="selectForm">
+        <div class="lm__chart-select" fxLayout="column">
+
+            <mat-form-field>
+                <mat-label>State</mat-label>
+                <mat-select required formControlName="state">
+                    <mat-option disabled>Select a state</mat-option>
+                    <mat-option *ngFor="let state of options.states" [value]="state">
+                        {{ state | titlecase }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Sector</mat-label>
+                <mat-select formControlName="sector" (selectionChange)="onSelect()">
+                    <mat-option disabled>Select a sector</mat-option>
+                    <mat-option *ngFor="let sector of options.sectors" [value]="sector">
+                        {{ sector | titlecase }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+        </div>
+
+    </form>
+</div>
+
+<div class="lm__chart-navigator" fxLayout="row" fxLayoutAlign="space-around center">
+
+    <button mat-mini-fab color="primary" routerLink="/sectors">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+       </button>
+
+    <button mat-mini-fab color="primary">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+       </button>
+
+</div>
