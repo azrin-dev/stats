@@ -28,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserModule } from './user/user.module';
 import { ClickableComponent } from './charts/configs/clickable/clickable.component';
 import { StateSectorForecastComponent } from './charts/state-sector-forecast/state-sector-forecast.component';
+import { RegressionComponent } from './charts/regression/regression.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { StateSectorForecastComponent } from './charts/state-sector-forecast/sta
     LineChartComponent,
     MindMapComponent,
     ClickableComponent,
-    StateSectorForecastComponent
+    StateSectorForecastComponent,
+    RegressionComponent
   ],
   imports: [
     BrowserModule,

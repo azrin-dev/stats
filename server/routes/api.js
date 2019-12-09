@@ -10,6 +10,7 @@ const imageController = require('../controllers/imageController');
 const uploadController = require('../controllers/uploadController');
 const autoCompleteController = require('../controllers/autoCompleteController');
 const companyController = require('../controllers/companyController');
+const chartController = require('../controllers/chartController');
 
 const pug = require('pug');
 
@@ -22,6 +23,10 @@ var upload = multer({ storage: storage });
 router.post('/company/profile/edit',
     catchErrors(companyController.profileEdit)
 );
+
+router.post('/charts/regression/linear',
+    chartController.linear
+)
 
 
 

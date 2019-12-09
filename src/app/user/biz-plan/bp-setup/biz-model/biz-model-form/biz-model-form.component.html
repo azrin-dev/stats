@@ -3,7 +3,7 @@
     <form [formGroup]="comForm">
         <div class="lm__form" fxLayout="column">
 
-            <mat-form-field #name id="mff-01" [color]="nameCom.touched ? 'accent' : 'primary'" (click)="activeElem(name)">
+            <mat-form-field #name id="mff-01" [color]="nameCom.touched ? 'accent' : 'Íprikigjfgjmary'" (click)="activeElem(name)">
                 <input matInput name="name" placeholder="Company Name" formControlName="nameCom" (keyup.enter)="saveInput(name)" required>
                 <mat-icon matSuffix id="mi-01" [color]="nameCom.touched ? 'accent' : 'primary'">cloud</mat-icon>
                 <mat-hint>Click to edit, press "Enter" to save</mat-hint>

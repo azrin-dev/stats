@@ -9,6 +9,7 @@ import { StateSectorHistoryComponent } from './charts/state-sector-history/state
 import { StatesSectorComponent } from './charts/states-sector/states-sector.component';
 import { userRoutes } from 'src/app/user/user-routing.module';
 import { StateSectorForecastComponent } from './charts/state-sector-forecast/state-sector-forecast.component';
+import { RegressionComponent } from './charts/regression/regression.component';
 
 export const routes: Routes = [
    { path: '',                               component: IntroComponent                 },
@@ -19,6 +20,7 @@ export const routes: Routes = [
    { path: 'states/manufacturing',           component: StatesManufacturingComponent   },
    { path: 'history/:state/:sector',         component: StateSectorHistoryComponent    },
    { path: 'forecast/:state/:sector',        component: StateSectorForecastComponent   },
+   { path: 'forecast/linear',                component: RegressionComponent            },
    { path: 'user',         redirectTo: '/user/login',   pathMatch: 'full'          }
 ];
 
