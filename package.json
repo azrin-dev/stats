@@ -60,7 +60,7 @@
     "rxjs": "~6.4.0",
     "session": "^0.1.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "^0.10.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1002.0",
