@@ -2285,7 +2285,7 @@
 
       function StateSectorForecastComponent_mat_option_15_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 10);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -2307,7 +2307,7 @@
 
       function StateSectorForecastComponent_mat_option_22_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 10);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -2457,9 +2457,9 @@
       StateSectorForecastComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: StateSectorForecastComponent,
         selectors: [["app-state-sector-forecast"]],
-        decls: 30,
+        decls: 27,
         vars: 31,
-        consts: [["fxLayout", "column", "fxLayoutAlign", "center center", 1, "lm__chart-container"], [1, "chart-container", 2, "position", "static", "display", "inline-block", "transform", "none", 3, "scheme", "view", "results", "animations", "legend", "legendTitle", "legendPosition", "gradient", "xAxis", "yAxis", "showXAxisLabel", "showYAxisLabel", "xAxisLabel", "yAxisLabel", "autoScale", "timeline", "showGridLines", "roundDomains", "tooltipDisabled", "trimXAxisTicks", "trimYAxisTicks", "maxXAxisTickLength", "maxYAxisTickLength"], [3, "formGroup"], ["fxLayout", "column", 1, "lm__chart-select"], ["required", "", "formControlName", "state"], ["disabled", ""], [3, "value", 4, "ngFor", "ngForOf"], ["formControlName", "sector", 3, "selectionChange"], ["fxLayout", "row", "fxLayoutAlign", "space-around center", 1, "lm__chart-navigator"], ["mat-mini-fab", "", "color", "primary", "routerLink", "/sectors"], ["mat-mini-fab", "", "color", "primary"], [3, "value"]],
+        consts: [["fxLayout", "column", "fxLayoutAlign", "center center", 1, "lm__chart-container"], [1, "chart-container", 2, "position", "static", "display", "inline-block", "transform", "none", 3, "scheme", "view", "results", "animations", "legend", "legendTitle", "legendPosition", "gradient", "xAxis", "yAxis", "showXAxisLabel", "showYAxisLabel", "xAxisLabel", "yAxisLabel", "autoScale", "timeline", "showGridLines", "roundDomains", "tooltipDisabled", "trimXAxisTicks", "trimYAxisTicks", "maxXAxisTickLength", "maxYAxisTickLength"], [3, "formGroup"], ["fxLayout", "column", 1, "lm__chart-select"], ["required", "", "formControlName", "state"], ["disabled", ""], [3, "value", 4, "ngFor", "ngForOf"], ["formControlName", "sector", 3, "selectionChange"], ["fxLayout", "row", "fxLayoutAlign", "left center", 1, "lm__chart-navigator"], ["mat-mini-fab", "", "color", "primary", "routerLink", "/sectors"], [3, "value"]],
         template: function StateSectorForecastComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -2545,16 +2545,6 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "mat-icon");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "keyboard_arrow_left");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "button", 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "mat-icon");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "keyboard_arrow_right");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
