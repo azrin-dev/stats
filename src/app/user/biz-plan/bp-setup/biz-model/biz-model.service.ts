@@ -9,7 +9,7 @@ import { BehaviorSubject, Observable, throwError } from 'rxjs';
 })
 export class BizModelService {
 
-   company: Company;
+   company: Company = {};
 
    compSource = new BehaviorSubject(this.company);
    compProfile = this.compSource as Observable<Company>;

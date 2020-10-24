@@ -15,13 +15,16 @@ export class RegressionComponent implements OnInit {
       group: 'Ordinal',
       domain: ['#DD0066', '#FF7400' , '#FFCE00', '#0B9822', '#043869']      
    }; 
+   gradient: boolean = false;
    results = "plotData";
    animations = "animations";
    legend = false;
    legendTitle = "legendTitle";
    legendPosition = "right";
    xAxis = false;
+   showXAxis: boolean = true;
    yAxis = true;
+   showYAxis: boolean = true;
    showXAxisLabel = false;
    showYAxisLabel = false;
    xAxisLabel = 'angle';
@@ -32,6 +35,10 @@ export class RegressionComponent implements OnInit {
    showSeriesOnHover = true;
    trimYAxisTicks = true;
    plotData;
+   timeline;
+   rangeFillOpacity;
+   trimXAxisTicks;
+   activate: boolean = true;
 
   constructor(
      private chartsService: ChartsService
@@ -68,6 +75,11 @@ export class RegressionComponent implements OnInit {
          }
       )
   }
+
+  select(event){
+     console.log(event);
+  }
+
   mathText = '3 - 1.5*sin(x) + cos(2*x) - 1.5*abs(cos(x))';
    mathFunction: (o: any) => any;
 }

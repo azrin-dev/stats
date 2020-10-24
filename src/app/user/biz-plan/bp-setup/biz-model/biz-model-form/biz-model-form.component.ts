@@ -4,14 +4,14 @@ import { BizModelService } from '../biz-model.service';
 import { Company } from 'src/app/user/user-config/interface/company';
 import { ProfileService } from 'src/app/user/services/profile-service/profile-service.service';
 import { User } from 'src/app/user/user-config/interface/user';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface IconState { id: String, name: String, color: String };
 export interface Category { name: String, descriptions: String[] };
 
 @Component({
   selector: 'app-biz-model-form',
-  templateUrl: './biz-model-form.component.html',
+  templateUrl: 'biz-model-form.component.html',
   styleUrls: ['./biz-model-form.component.scss']
 })
 export class BizModelFormComponent implements OnInit {

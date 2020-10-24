@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProfileService } from 'src/app/user/services/profile-service/profile-service.service';
 import { trigger, state, transition, animate, style } from '@angular/animations';
 import { User } from 'src/app/user/user-config/interface/user';
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email] ),
       password: new FormControl('', Validators.required)
    });
-   profile: User = null;
+   profile: User = {};
 
   constructor(
      private profileService: ProfileService,

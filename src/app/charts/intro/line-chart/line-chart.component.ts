@@ -3,7 +3,7 @@ import { LineChartService } from './line-chart.service';
 
 @Component({
   selector: 'app-line-chart',
-  templateUrl: './line-chart.component.html',
+  templateUrl: 'line-chart.component.html',
   styleUrls: ['./line-chart.component.scss']
 })
 export class LineChartComponent implements OnInit { 
@@ -19,6 +19,8 @@ export class LineChartComponent implements OnInit {
    xAxisLabel = '';
    showYAxisLabel = false;
    yAxisLabel = '';
+   showGridLines: boolean = false;
+   autoScale: boolean = true;
    colorScheme = {
       name: 'cool',
       selectable: true,
@@ -58,6 +60,10 @@ export class LineChartComponent implements OnInit {
            console.log(response);
         }
      )
+  }
+  
+  select(event){
+     console.log(event);
   }
 
 }

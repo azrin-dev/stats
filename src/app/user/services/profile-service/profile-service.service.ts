@@ -6,7 +6,7 @@ import { User } from 'src/app/user/user-config/interface/user';
 import { catchError, map } from 'rxjs/operators';
 import { httpOptions, jwtToken } from '../httpOptions';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -15,14 +15,15 @@ export class ProfileService {
 
    token: string;
    decodedToken: boolean = false;
-   user: User;
+   user: User = {};
+   country: string = '';
    loggedIn: boolean = false;
-   country;
    paramsLinkedin;
+   
 
-   locSource = new BehaviorSubject(this.country);
+   locSource = new BehaviorSubject( this.country );
    location = this.locSource as Observable<string>;
-
+   
    userSource = new BehaviorSubject(this.user);
    profile = this.userSource as Observable<User>;
 

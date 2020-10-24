@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LineChartService {
 
-   dataY: number;
+   dataY: number = 0;
 
    dataSource = new BehaviorSubject(this.dataY);
    dataYasObs = this.dataSource as Observable<number>;

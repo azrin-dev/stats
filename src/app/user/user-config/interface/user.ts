@@ -5,7 +5,7 @@ export interface User {
    date?: Date;
 
    // Private Info
-   email: string;
+   email?: string;
    name?: string;
    handphone?: number;
    birthday?: Date;
