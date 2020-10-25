@@ -73,7 +73,8 @@ export class ProfileService {
    }   //
 
    register(formValue)
-   {  this.http.post('/api/user/register', formValue)
+   {  console.log(formValue)
+      this.http.post('/api/user/register', formValue)
          .subscribe(
             (response: User) => {
                if(response && response._id){
@@ -81,7 +82,10 @@ export class ProfileService {
                   this.snackBar.open('Your registration is successfull. Please check your email for authentication', 'X', {duration: 10000, panelClass: 'red-theme'});
                }
             },
-            error => this.snackBar.open(error, 'X', {duration: 10000, panelClass: 'red-theme'})     
+            error => {
+               console.log(error);
+               this.snackBar.open(error, 'X', {duration: 10000, panelClass: 'red-theme'})  
+            }   
          )
    }  //
    

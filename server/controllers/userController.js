@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const User = mongoose.model('User');
 const { promisify } = require('es6-promisify');
-const { body } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+const { body, sanitizeBody } = require("express-validator");
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const mail = require('../handlers/mail');
@@ -117,6 +116,7 @@ exports.userExist = async(req, res, next) => {
 };
 
 exports.register = async(req, res) => {
+
     const authToken = crypto.randomBytes(20).toString('hex');
     const authTokenExpire = Date.now() + 3600000;
     const user = new User({
@@ -125,8 +125,9 @@ exports.register = async(req, res) => {
         authTokenExpire
     });
     await user.setPassword(req.body.password);
-    const response = await user.save()
-        .catch(error => res.json(error));
+    const response = await user.save().catch(
+        error => res.json(error)
+    );
     if (response && response._id) {
         var options = {
             to: response.email,

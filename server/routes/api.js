@@ -189,11 +189,4 @@ router.post('/posts/post/update',
     catchErrors(postController.updateAPost)
 );
 
-
-
-
-
-
-
-
 module.exports = router;
