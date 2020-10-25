@@ -29,6 +29,8 @@ import { UserModule } from './user/user.module';
 import { ClickableComponent } from './charts/configs/clickable/clickable.component';
 import { StateSectorForecastComponent } from './charts/state-sector-forecast/state-sector-forecast.component';
 import { RegressionComponent } from './charts/regression/regression.component';
+import { PagesComponent } from './pages/pages.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { RegressionComponent } from './charts/regression/regression.component';
     MindMapComponent,
     ClickableComponent,
     StateSectorForecastComponent,
-    RegressionComponent
+    RegressionComponent,
+    PagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
